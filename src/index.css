@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-kannada: 'Noto Sans Kannada', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Light theme overrides */
+html.light-theme {
+  color-scheme: light;
+}
+
+html.light-theme body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+html.light-theme .bg-slate-950 {
+  background-color: #f8fafc !important;
+}
+
+html.light-theme .bg-slate-900 {
+  background-color: #ffffff !important;
+}
+
+html.light-theme .bg-slate-900\/70,
+html.light-theme .bg-slate-900\/60,
+html.light-theme .bg-slate-900\/50,
+html.light-theme .bg-slate-900\/40 {
+  background-color: #f1f5f9 !important;
+}
+
+html.light-theme .bg-slate-800 {
+  background-color: #e2e8f0 !important;
+}
+
+html.light-theme .border-slate-800,
+html.light-theme .border-slate-800\/80,
+html.light-theme .border-slate-800\/60,
+html.light-theme .border-slate-700 {
+  border-color: #e2e8f0 !important;
+}
+
+html.light-theme .text-slate-100,
+html.light-theme .text-white {
+  color: #0f172a !important;
+}
+
+html.light-theme .text-slate-200 {
+  color: #1e293b !important;
+}
+
+html.light-theme .text-slate-300 {
+  color: #334155 !important;
+}
+
+html.light-theme .text-slate-400 {
+  color: #64748b !important;
+}
+
+/* Custom delicate scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
+
+/* Pulse animation for voice ring */
+@keyframes orbPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.animate-orb-pulse {
+  animation: orbPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

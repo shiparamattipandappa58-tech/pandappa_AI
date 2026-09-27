@@ -1,0 +1,9 @@
+{
+  "name": "PANDAPPA AI",
+  "description": "A modern, intelligent, fast, mobile-first personal AI assistant with voice, document analysis, study tools, and coding capabilities.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
